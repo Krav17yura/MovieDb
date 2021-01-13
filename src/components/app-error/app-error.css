@@ -1,0 +1,12 @@
+.error-image{
+    max-width: 130px;
+    position: relative;
+    z-index: 2;
+}
+
+@media(max-width: 670px){
+
+    .error-image{
+        max-width: 100px;
+    }
+}

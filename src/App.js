@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import Toolbar from "@material-ui/core/Toolbar";
+import Container from "@material-ui/core/Container";
+
+import Box from "@material-ui/core/Box";
+import Grid from "@material-ui/core/Grid";
+
+import './app.css'
+import {Header} from "./components/Header";
+import {Filters} from "./components/Filters";
+import {Movies} from './components/Movies'
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    console.log(process.env.computername)
+    return (
+        <Box>
+            <Header/>
+            <Container maxWidth={"lg"} style={{paddingTop: 30}}>
+                <Toolbar/>
+                <Grid container>
+                    <Filters/>
+                    <Movies/>
+                </Grid>
+            </Container>
+
+        </Box>
+    )
 }
 
 export default App;
